@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/simple_json_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:text="Simple JSON"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/array_json_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:text="Array JSON"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/nested_json_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:text="Nested JSON"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textStyle="normal" />
+
+
+</LinearLayout>
