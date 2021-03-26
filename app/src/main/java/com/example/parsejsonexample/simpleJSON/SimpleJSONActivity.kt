@@ -62,25 +62,25 @@ class SimpleJSONActivity : AppCompatActivity() {
                     Log.d("Pretty Printed JSON :", prettyJson)
                     binding.jsonResultsTextview.text = prettyJson
 
-                    val jsonObject = JSONTokener(response).nextValue() as? JSONObject
+                    val jsonObject = JSONTokener(response).nextValue() as JSONObject
 
                     // ID
-                    val id = jsonObject?.getString("id") ?: "N/A"
+                    val id = jsonObject.getString("id")
                     binding.employeeIdTextview.text = id
                     Log.i("ID: ", id)
 
                     // Employee Name
-                    val employeeName = jsonObject?.getString("employee_name") ?: "N/A"
+                    val employeeName = jsonObject.getString("employee_name")
                     binding.employeeNameTextview.text = employeeName
                     Log.i("Employee Name: ", employeeName)
 
                     // Employee Salary
-                    val employeeSalary = jsonObject?.getString("employee_salary") ?: "N/A"
+                    val employeeSalary = jsonObject.getString("employee_salary")
                     binding.employeeSalaryTextview.text = employeeSalary
                     Log.i("Employee Salary: ", employeeSalary)
 
                     // Employee Age
-                    val employeeAge = jsonObject?.getString("employee_age") ?: "N/A"
+                    val employeeAge = jsonObject.getString("employee_age")
                     binding.employeeAgeTextview.text = employeeAge
                     Log.i("Employee Age: ", employeeAge)
 
