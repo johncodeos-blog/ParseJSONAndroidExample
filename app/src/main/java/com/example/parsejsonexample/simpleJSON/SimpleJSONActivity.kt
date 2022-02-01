@@ -6,16 +6,13 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.parsejsonexample.databinding.ActivitySimpleJsonBinding
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonParser
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 import org.json.JSONObject
 import org.json.JSONTokener
 import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
-
+@DelicateCoroutinesApi
 class SimpleJSONActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySimpleJsonBinding
@@ -35,7 +32,6 @@ class SimpleJSONActivity : AppCompatActivity() {
 
         parseJSON()
     }
-
 
     private fun parseJSON() {
         GlobalScope.launch(Dispatchers.IO) {

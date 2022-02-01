@@ -13,16 +13,14 @@ import com.example.parsejsonexample.RVAdapter
 import com.example.parsejsonexample.databinding.ActivityNestedJsonBinding
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonParser
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 import org.json.JSONObject
 import org.json.JSONTokener
 import java.net.URL
 import java.util.*
 import javax.net.ssl.HttpsURLConnection
 
+@DelicateCoroutinesApi
 class NestedJSONActivity : AppCompatActivity() {
 
     var itemsArray: ArrayList<Cell> = ArrayList()
@@ -59,7 +57,6 @@ class NestedJSONActivity : AppCompatActivity() {
 
     @SuppressLint("LongLogTag")
     private fun parseJSON() {
-
         GlobalScope.launch(Dispatchers.IO) {
             val url =
                     URL("https://raw.githubusercontent.com/johncodeos-blog/ParseJSONAndroidExample/main/nested.json")
